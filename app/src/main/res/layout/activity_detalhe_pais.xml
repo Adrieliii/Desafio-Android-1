@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalhePaisActivity">
+
+    // como não consegui utilizar o fragment, pela falta de conhecimento prévio e tempo, utilizei
+    activity.
+
+    <Button
+        android:id="@+id/button_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="@string/previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detalhe_pais_imagem"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="Voltar" />
+
+    <ImageView
+        android:id="@+id/detalhe_pais_imagem"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="340dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mapa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.254"
+        tools:srcCompat="@drawable/mapa" />
+
+    <ImageView
+        android:id="@+id/detalhe_pais_banner"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:color/holo_red_light"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/detalhe_pais_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Situação Covid"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/detalhe_pais_banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/detalhe_pais_banner"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <TextView
+        android:id="@+id/detalhe_pais_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detalhe_pais_banner"
+        app:layout_constraintVertical_bias="0.060000002"
+        tools:text="Mundo" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="228dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detalhe_pais_imagem" />
+</androidx.constraintlayout.widget.ConstraintLayout>
